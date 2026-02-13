@@ -29,6 +29,11 @@ favorites = {
   drink: "Cola",
 }
 
+person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+
+puts person[:name]
+
+
 def person_and_faves(person, favorites = {})
   puts "#{person} loves to eat #{favorites[:food]}, wants to go to #{favorites[:place]}, and likes drinking #{favorites[:drink]}"
 end

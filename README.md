@@ -3,10 +3,13 @@ Ruby projects are saved within this repository.
 
 Each projects are saved on its respective branch so to find a specific project, you must select a branch to the dropdown. 
 
+Note: Some projects have multiple Ruby files 
 
 
+<br>
+<br>
 
-**Don't mind the guide below
+**Don't mind the guide below since the guide is not yet readable
 
 ## Ruby Language Guide
 

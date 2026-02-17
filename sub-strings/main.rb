@@ -1,5 +1,4 @@
 def substrings(string, array_of_substrings)
-  number_occured = 0
   string_in_lowercase = string.downcase()
   word_and_number_of_occurences = {}
 
@@ -8,15 +7,6 @@ def substrings(string, array_of_substrings)
       word_and_number_of_occurences[substring.to_sym] = string_in_lowercase.scan(substring).length
     
     end
-    # words_in_string.each do |word|
-    #   if word == substring
-    #     number_occured += 1
-    #     word_and_number_of_occurences[substring.to_sym] = number_occured
-      
-    #   end
-    # end
-
-  # number_occured = 0
   end
 
   return word_and_number_of_occurences

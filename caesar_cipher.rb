@@ -27,6 +27,12 @@ def caesar_cipher(string, shift)
   return encrypted_string
 end
 
+def ask_for_user_input()
+  print "Please enter a string to be encrypted: "
+  user_input = gets.chomp
+  return user_input
+end
 
-puts caesar_cipher("What a string!", 5)
+puts "Here is the encrypted string: #{caesar_cipher("What a string!", 5)}"
+
 

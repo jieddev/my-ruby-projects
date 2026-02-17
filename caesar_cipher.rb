@@ -24,11 +24,9 @@ def caesar_cipher(string, shift)
     end
   end
 
-  puts encrypted_string
-
-  # shifted_letter = ( index_of_letter + shift) % 26
+  return encrypted_string
 end
 
 
-caesar_cipher("What a string!", 5)
+puts caesar_cipher("What a string!", 5)
 

@@ -59,3 +59,11 @@ numbers = [1, 2, 3, 4, 5]
 
 # p calling_students
 
+
+test_scores = [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 55, 67, 81]]
+
+test_scores.all? do |score|
+  puts score.any? do |score|
+    score > 80
+  end
+end

@@ -33,6 +33,6 @@ def ask_for_user_input()
   return user_input
 end
 
-puts "Here is the encrypted string: #{caesar_cipher("What a string!", 5)}"
+puts "#{caesar_cipher("What a string!", 5)}"
 
 

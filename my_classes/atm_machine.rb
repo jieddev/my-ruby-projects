@@ -1,5 +1,4 @@
 class AtmMachine
-
   def deposit(money_to_deposit)
     puts "\e[32mYou've deposited ₱#{money_to_deposit}!\e[0m"
   end
@@ -7,6 +6,7 @@ class AtmMachine
   def withdraw(money_to_withdraw)
     puts "\e[31mYou've withdrawn ₱#{money_to_withdraw}\e[0m"
   end
+
 end
 
 
@@ -14,6 +14,7 @@ def ask_amount()
   print "Amount: "
   user_inputted_amount = gets.chomp
   return user_inputted_amount
+
 end
 
 

@@ -4,9 +4,17 @@ module Speak
   end
 end
 
+module Eat
+  def eat(sound)
+    puts sound
+  end
+end
+
+
 
 class GoodDog
   include Speak
+  include Eat
 end
 
 class HumanBeing
@@ -19,5 +27,7 @@ end
 # bob = HumanBeing.new
 # bob.speak("Hello!")
 
+brownie = GoodDog.new
+brownie.eat("um um")
 
-puts GoodDog.ancestors
+# puts GoodDog.ancestors

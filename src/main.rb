@@ -1,6 +1,4 @@
 def stock_picker(days)
-  lowest_stock_price = 0
-  highest_stock_price = 0
   profit = 0
   profits = []
   days_passed = []
@@ -18,28 +16,37 @@ def stock_picker(days)
     end
   end
 
-  positive_profits = profits.select { |profit| profit[2] == profit[2].abs }
-  no_zero_profits = positive_profits.filter { |profit| profit[2] != 0}
+  no_zero_profits = filter_profit_to_return_positive_non_zero_profit(profits)
 
+  biggest_profit = find_the_highest_profit(no_zero_profits)
+
+  best_day_to_buy_and_sell = find_best_day_to_buy_and_sell(biggest_profit, no_zero_profits)
+
+  return best_day_to_buy_and_sell
+end
+
+def filter_profit_to_return_positive_non_zero_profit(profits) 
+  positive_profits = profits.select { |profit| profit[2] == profit[2].abs }
+  return no_zero_profits = positive_profits.filter { |profit| profit[2] != 0}  
+
+end
+
+def find_the_highest_profit(no_zero_profits)
   profit_each_day = no_zero_profits.map { |sub_array| sub_array[2]}
   biggest_profit = profit_each_day.max()
 
+  return biggest_profit
+end
+
+def find_best_day_to_buy_and_sell(biggest_profit, no_zero_profits)
   buy_and_sell_day_with_biggest_profit = no_zero_profits.select { |sub_array| sub_array[2] == biggest_profit}
-
-  # return best_day_to_buy_and_sell
-  # return profits
-  # return positive_profits
-  # return no_zero_profits
-  # return profit_each_day
-  # return biggest_profit
-  # return buy_and_sell_day_with_biggest_profit
-
-  # return best_day_to_buy_and_sell = buy_and_sell_day_with_biggest_profit.delete_at(2)
   best_day_to_buy_and_sell = buy_and_sell_day_with_biggest_profit[0]
 
   best_day_to_buy_and_sell.delete_at(2)
 
   return best_day_to_buy_and_sell
 end
+
+
 
 p stock_picker([17,3,6,9,15,8,6,1,10])

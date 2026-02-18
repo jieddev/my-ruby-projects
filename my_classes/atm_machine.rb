@@ -1,3 +1,10 @@
+module Maintenance
+  def maintenance()
+    puts "ATM IS UNDER MAINTENANCE! COME BACK LATER"
+  end
+
+end
+
 class AtmMachine
   def deposit(money_to_deposit)
     puts "\e[32mYou've deposited ₱#{money_to_deposit}!\e[0m"
@@ -6,6 +13,8 @@ class AtmMachine
   def withdraw(money_to_withdraw)
     puts "\e[31mYou've withdrawn ₱#{money_to_withdraw}\e[0m"
   end
+
+  include Maintenance
 
 end
 
@@ -30,14 +39,19 @@ def transact()
   end
 
   case user_input
-  when "Deposit"
-    amount = ask_amount()
-    transaction_1.deposit(amount)
+    when "Deposit"
+      amount = ask_amount()
+      transaction_1.deposit(amount)
 
-  when "Withdraw"
-    amount = ask_amount()
-    transaction_1.withdraw(amount)
-  end
+    when "Withdraw"
+      amount = ask_amount()
+      transaction_1.withdraw(amount)
+
+    when "Maintenance"
+      transaction_1.maintenance()
+      return 
+    end
+
 
   transact()
 

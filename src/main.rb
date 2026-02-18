@@ -22,11 +22,18 @@ def stock_picker(days)
   positive_profits = profits.select { |profit| profit[2] == profit[2].abs }
   no_zero_profits = positive_profits.filter { |profit| profit[2] != 0}
 
+  profit_each_day = no_zero_profits.map { |sub_array| sub_array[2]}
+  biggest_profit = profit_each_day.max()
+
+  buy_and_sell_day_with_biggest_profit = no_zero_profits.select { |sub_array| sub_array[2] == biggest_profit}
 
   # return best_day_to_buy_and_sell
   # return profits
   # return positive_profits
-  return no_zero_profits
+  # return no_zero_profits
+  # return profit_each_day
+  # return biggest_profit
+  # return buy_and_sell_day_with_biggest_profit
 
 end
 

@@ -2,7 +2,6 @@ def stock_picker(days)
   lowest_stock_price = 0
   highest_stock_price = 0
   profit = 0
-  best_day_to_buy_and_sell = []
   profits = []
   days_passed = []
 
@@ -35,6 +34,12 @@ def stock_picker(days)
   # return biggest_profit
   # return buy_and_sell_day_with_biggest_profit
 
+  # return best_day_to_buy_and_sell = buy_and_sell_day_with_biggest_profit.delete_at(2)
+  best_day_to_buy_and_sell = buy_and_sell_day_with_biggest_profit[0]
+
+  best_day_to_buy_and_sell.delete_at(2)
+
+  return best_day_to_buy_and_sell
 end
 
 p stock_picker([17,3,6,9,15,8,6,1,10])

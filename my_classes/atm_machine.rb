@@ -58,3 +58,6 @@ def transact()
 end
 
 transact()
+
+
+puts AtmMachine.ancestors

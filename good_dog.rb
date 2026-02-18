@@ -10,8 +10,6 @@ module Eat
   end
 end
 
-
-
 class GoodDog
   include Speak
   include Eat
@@ -20,7 +18,6 @@ end
 class HumanBeing
   include Speak
 end
-
 
 # sparky = GoodDog.new
 # sparky.speak("Arf!")

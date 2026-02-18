@@ -9,3 +9,9 @@ Note: Some branch have multiple Ruby project like the ruby-exercises.
 <br>
 <br>
 
+### Ruby Guide
+
+<br>
+
+![Ruby Built-in Methods Guide](guides/ruby_guide.png)
+

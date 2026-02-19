@@ -1,4 +1,10 @@
 class Hero
+  attr_accessor :name, :age, :health, :strength
+
+  def self.info
+    puts "Hero is bayani in tagalog"
+  end
+
   def initialize(name, role, damage_type, energy)
     @name = name
     @role = role
@@ -12,6 +18,8 @@ class Hero
 
 end
 
-p gusion = Hero.new("Gusion", "Assassin/Mage", "Magic Damage", 99)
+Hero.info
 
-p gusion.energy
+# p gusion = Hero.new("Gusion", "Assassin/Mage", "Magic Damage", 99)
+
+# p gusion.energy

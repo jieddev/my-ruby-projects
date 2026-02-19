@@ -10,6 +10,9 @@ Note: Some branch have multiple Ruby project like the ruby-exercises.
 <br>
 
 ### My Ruby Guide
+Ruby Docs: https://docs.ruby-lang.org/en/3.4/index.html
+
+Below is the built-in methods of data types (objects) in Ruby that I ought to master. You can also use the <strong>#methods</strong> to show more of these. 
 
 <br>
 

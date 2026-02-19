@@ -9,7 +9,7 @@ Note: Some branch have multiple Ruby project like the ruby-exercises.
 <br>
 <br>
 
-### Ruby Guide
+### My Ruby Guide
 
 <br>
 

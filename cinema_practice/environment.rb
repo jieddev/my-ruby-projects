@@ -1,6 +1,5 @@
-
-
-
+require_relative 'cinema'
+require_relative 'movie'
 
 cobble_hill = Cinema.new("Cobble Hill Cinema", "Court St, Brooklyn")
 spider_man = Movie.new("Spider-man", "9:00")

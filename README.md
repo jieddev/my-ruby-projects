@@ -12,7 +12,7 @@ Note: Some branch have multiple Ruby project like the ruby-exercises.
 ### My Ruby Guide
 Ruby Docs: https://docs.ruby-lang.org/en/3.4/index.html
 
-Below is the built-in methods of data types (objects) in Ruby that I ought to master. You can also use the <strong>#methods</strong> to show more of these. 
+Below is the built-in methods of data types (objects) in Ruby that I ought to master. You can also use the <strong>#methods</strong> to show more of these and <strong>#methods.grep(/"example"/)</strong> to find a method with an example word on it. Just replace the "example" word to a word you desire.
 
 <br>
 

@@ -11,11 +11,11 @@ class Board
     move_to_integer = move.to_i()
 
     if move_to_integer.between?(1,3)
-      @first_row[move-1].replace(["X"])
+      @first_row[move_to_integer-1].replace(["X"])
     elsif move_to_integer.between?(4, 6)
-      @second_row[move-4].replace(["X"])
+      @second_row[move_to_integer-4].replace(["X"])
     elsif move_to_integer.between?(7, 9)
-      @third_row[move-7].replace(["X"])
+      @third_row[move_to_integer-7].replace(["X"])
 
     end
 
@@ -32,11 +32,11 @@ class Board
     move_to_integer = move.to_i()
 
     if move_to_integer.between?(1,3)
-      @first_row[move-1].replace(["O"])
+      @first_row[move_to_integer-1].replace(["O"])
     elsif move_to_integer.between?(4, 6)
-      @second_row[move-4].replace(["O"])
+      @second_row[move_to_integer-4].replace(["O"])
     elsif move_to_integer.between?(7, 9)
-      @third_row[move-7].replace(["O"])
+      @third_row[move_to_integer-7].replace(["O"])
 
     end
 

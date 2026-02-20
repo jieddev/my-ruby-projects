@@ -11,10 +11,9 @@ class Board
     if move.between?(1,3)
       @first_row[move-1].replace(["X"])
     elsif move.between?(4, 6)
-      p @second_row
-      @second_row[move-1].replace(["X"])
+      @second_row[move-4].replace(["X"])
     elsif move.between?(7, 9)
-      @third_row[move-1].replace(["X"])
+      @third_row[move-7].replace(["X"])
 
     end
 

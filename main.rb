@@ -16,40 +16,55 @@ player_two_name = gets.chomp
 
 player_one = Player.new(player_one_name)
 player_two = Player.new(player_two_name)
-board = Board.new([[" "],[" "],[" "]], [[" "],[" "],[" "]], [[" "],[" "],[" "]])
 
-move_one = player_one.prompt_player_move()
+player_one_win = false
 
-board.update_board_for_player_one(move_one)
 
-move_two = player_two.prompt_player_move
+while player_one_win == false 
 
-board.update_board_for_player_two(move_two)
+  board = Board.new([[" "],[" "],[" "]], [[" "],[" "],[" "]], [[" "],[" "],[" "]])
 
-move_three = player_one.prompt_player_move()
+  move_one = player_one.prompt_player_move()
 
-board.update_board_for_player_one(move_three)
+  board.update_board_for_player_one(move_one)
 
-move_four = player_two.prompt_player_move()
+  move_two = player_two.prompt_player_move
 
-board.update_board_for_player_two(move_four)
+  board.update_board_for_player_two(move_two)
 
-move_five = player_one.prompt_player_move()
+  move_three = player_one.prompt_player_move()
 
-board.update_board_for_player_one(move_five)
+  board.update_board_for_player_one(move_three)
+  player_one_win = board.check_if_player_one_won()
 
-move_six = player_two.prompt_player_move()
+  move_four = player_two.prompt_player_move()
 
-board.update_board_for_player_two(move_six)
+  board.update_board_for_player_two(move_four)
+  board.check_if_player_one_won
 
-move_seven = player_one.prompt_player_move()
+  move_five = player_one.prompt_player_move()
 
-board.update_board_for_player_one(move_seven)
+  board.update_board_for_player_one(move_five)
+  board.check_if_player_one_won
 
-move_eight = player_two.prompt_player_move()
 
-board.update_board_for_player_two(move_eight)
+  move_six = player_two.prompt_player_move()
 
-move_nine = player_one.prompt_player_move()
+  board.update_board_for_player_two(move_six)
+  board.check_if_player_one_won
 
-board.update_board_for_player_one(move_nine)
+
+  move_seven = player_one.prompt_player_move()
+
+  board.update_board_for_player_one(move_seven)
+
+
+  move_eight = player_two.prompt_player_move()
+
+  board.update_board_for_player_two(move_eight)
+
+  move_nine = player_one.prompt_player_move()
+
+  board.update_board_for_player_one(move_nine)
+
+end

@@ -6,6 +6,6 @@
 
 # # p move.methods.grep(/be/)
 
-arr = []
+# arr = []
 
-puts arr.methods.grep(/inc/)
+# puts arr.methods.grep(/inc/)

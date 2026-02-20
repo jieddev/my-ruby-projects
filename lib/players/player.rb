@@ -7,11 +7,14 @@ class Player
   def prompt_player_move()
     print "What is your move #{@player_name}? "
     player_move = gets.chomp
-    return player_move
 
+    if player_move == "Quit"
+      return "Game Terminated!"
+    else
+      return player_move
+    end
   end
 
-  
 
 
 end

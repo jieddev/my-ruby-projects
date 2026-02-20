@@ -8,4 +8,4 @@
 
 arr = []
 
-puts arr.methods.grep(/re/)
+puts arr.methods.grep(/inc/)

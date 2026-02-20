@@ -41,3 +41,15 @@ board.update_board_for_player_one(move_five)
 move_six = player_two.prompt_player_move()
 
 board.update_board_for_player_two(move_six)
+
+move_seven = player_one.prompt_player_move()
+
+board.update_board_for_player_one(move_seven)
+
+move_eight = player_two.prompt_player_move()
+
+board.update_board_for_player_two(move_eight)
+
+move_nine = player_one.prompt_player_move()
+
+board.update_board_for_player_one(move_nine)

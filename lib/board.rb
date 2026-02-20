@@ -77,35 +77,35 @@ class Board
     if win_combinations.any? do |combo|
       combo.all? { |number| Board.unavailable_tile.include?(number)}
     end
-      puts "YOU WON! Player One"
+      puts "YOU WON!"
       player_one_win = true
       return player_one_win
     end
 
   end
 
-  def check_if_player_two_won()
-    # player_one_win = false
-    win_combinations = [
-      [1,2,3],
-      [4,5,6],
-      [7,8,9],
-      [1,4,7],
-      [2,5,8],
-      [3,6,9],
-      [1,5,9],
-      [3,5,7]
-    ]
+  # def check_if_player_two_won()
+  #   # player_one_win = false
+  #   win_combinations = [
+  #     [1,2,3],
+  #     [4,5,6],
+  #     [7,8,9],
+  #     [1,4,7],
+  #     [2,5,8],
+  #     [3,6,9],
+  #     [1,5,9],
+  #     [3,5,7]
+  #   ]
     
-    if win_combinations.any? do |combo|
-      combo.all? { |number| Board.unavailable_tile.include?(number)}
-    end
-      puts "YOU WON! Player Two"
-      player_one_win = true
-      return player_one_win
-    end
+  #   if win_combinations.any? do |combo|
+  #     combo.all? { |number| Board.unavailable_tile.include?(number)}
+  #   end
+  #     puts "YOU WON! Player Two"
+  #     player_one_win = true
+  #     return player_one_win
+  #   end
 
-  end
+  # end
 
 
 end

@@ -7,9 +7,6 @@ require_relative 'lib/players/player'
 
 puts "--- Tic Tac Toe built in Ruby by Jieddev --- ".colorize(:red)
 
-# board_1 = Board.new()
-
-# board_1.update_board()
 
 print "Player 1 Name: "
 player_one_name = gets.chomp
@@ -23,8 +20,24 @@ board = Board.new([[" "],[" "],[" "]], [[" "],[" "],[" "]], [[" "],[" "],[" "]])
 
 move_one = player_one.prompt_player_move()
 
-board.update_board(move_one.to_i)
+board.update_board_for_player_one(move_one)
 
 move_two = player_two.prompt_player_move
 
-board.update_board(move_two.to_i)
+board.update_board_for_player_two(move_two)
+
+move_three = player_one.prompt_player_move()
+
+board.update_board_for_player_one(move_three)
+
+move_four = player_two.prompt_player_move()
+
+board.update_board_for_player_two(move_four)
+
+move_five = player_one.prompt_player_move()
+
+board.update_board_for_player_one(move_five)
+
+move_six = player_two.prompt_player_move()
+
+board.update_board_for_player_two(move_six)

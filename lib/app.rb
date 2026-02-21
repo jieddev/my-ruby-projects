@@ -22,7 +22,8 @@ class App
         update_task
         
       when "Delete"
-      
+        delete_task
+        
       end
     end
   end
@@ -68,6 +69,17 @@ class App
     puts task ? "Task updated successfully!".colorize(:green) : "Task not found".colorize(:red)
 
   end
+
+  def delete_task 
+    print "Task ID: "
+    task_id = gets.chomp.to_i
+
+    @task_database.delete_task_by_id(task_id)
+
+    puts "Task successfully deleted".colorize(:green)
+  
+  end
+
 
 
 

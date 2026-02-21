@@ -9,5 +9,9 @@ class Task
     @end_date = end_date
   end
 
+  def priority_level 
+    "normal"
+  end
+
 
 end

@@ -20,6 +20,9 @@ class FavoriteTask < Task
     @priority == 'high'
   end
 
+  def priority_level
+    @priority
+  end
 
 
 end

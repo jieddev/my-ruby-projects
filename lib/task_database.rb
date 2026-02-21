@@ -24,10 +24,10 @@ class TaskDatabase
   end
 
   def update_task(task_id, task_name:, start_date:, end_date: )
-    task = find(task_id)
+    task = locate_task_id(task_id)
     return unless task 
 
-    task.name = name 
+    task.task_name = task_name 
     task.start_date = start_date
     task.end_date = end_date
     return task
@@ -38,4 +38,9 @@ class TaskDatabase
     @task_list.reject! { |task| task.task_id == task_id}
   
   end
+
+  def locate_task_id(task_id)
+    @task_list.find {|task| task.task_id == task_id}
+  end
+
 end

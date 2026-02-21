@@ -19,6 +19,7 @@ class App
       when "Read"
         read_all_task_in_database
       when "Update"
+        update_task
         
       when "Delete"
       
@@ -32,7 +33,7 @@ class App
     puts "--- Task List CRUD Project ---"
     print "Please Type 'Create', 'Read', 'Update', or 'Delete': "
   end
-  
+
   def create_task
     print "Task Name: "
     task_name = gets.chomp
@@ -57,9 +58,14 @@ class App
 
     print "Task Name: "
     task_name = gets.chomp
-    print "Start Date :"
+    print "Start Date (mm/dd/yyyy): "
+    start_date = gets.chomp 
+    print "End Date (mm/dd/yyyy): "
+    end_date = gets.chomp
 
+    task = @task_database.update_task(task_id, task_name: task_name, start_date: start_date, end_date: end_date)
 
+    puts task ? "Task updated successfully!".colorize(:green) : "Task not found".colorize(:red)
 
   end
 

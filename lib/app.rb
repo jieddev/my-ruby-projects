@@ -32,18 +32,15 @@ class App
     puts "--- Task List CRUD Project ---"
     print "Please Type 'Create', 'Read', 'Update', or 'Delete': "
   end
-
-  def prompt_user_for_task_info
+  
+  def create_task
+    print "Task Name: "
     task_name = gets.chomp
     print "Start Date (mm/dd/yyyy): "
     start_date = gets.chomp 
     print "End Date (mm/dd/yyyy): "
     end_date = gets.chomp
-  end
-
-  def create_task
-    prompt_user_for_task_info
-
+  
     task = @task_database.add_task(task_name, start_date, end_date)
 
     puts "Successfully created task".colorize(:green)
@@ -61,6 +58,7 @@ class App
     print "Task Name: "
     task_name = gets.chomp
     print "Start Date :"
+
 
 
   end

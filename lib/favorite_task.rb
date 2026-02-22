@@ -11,12 +11,12 @@ class FavoriteTask < Task
 
   def to_hash
     return {
-      task_id: @task_id
-      task_name: @task_name
-      start_date: @start_date
-      end_date: @end_date
-      priority: @priority
-      mark_as_favorite: @mark_as_favorite
+      task_id: @task_id,
+      task_name: @task_name,
+      start_date: @start_date,
+      end_date: @end_date,
+      priority: @priority,
+      mark_as_favorite: @mark_as_favorite,
     }
   end
 

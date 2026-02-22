@@ -15,6 +15,22 @@ class TaskDatabase
   
   end
 
+  def add_favorite_task(task_name, start_date, end_date, mark_as_favorite)
+    task = FavoriteTask.new(
+      task_id: @next_id,
+      task_name: task_name
+      start_date: start_date
+      end_date: end_date
+      priority: priority
+      mark_as_favorite: mark_as_favorite
+    )
+
+    @task_list << task 
+    @next_id += 1
+    return task 
+  end
+
+
   def select_all_tasks
     @task_list 
   end

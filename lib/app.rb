@@ -1,4 +1,5 @@
 require_relative 'task_database'
+require_relative 'favorite_task'
 require 'colorize'
 
 class App 
@@ -15,7 +16,15 @@ class App
 
       case selected_operation
       when "Create"
-        create_task
+        print "Normal task(1)? or Favorite task(2): "
+        selected_task_type = gets.chomp.to_i
+        
+        case selected_task_type
+        when 1 
+          create_task
+        when 2
+          create_favorite_task
+        end
       when "Read"
         read_all_task_in_database
       when "Update"
@@ -48,6 +57,25 @@ class App
     puts "Successfully created task".colorize(:green)
   end
 
+
+  def create_favorite_task
+    print "Task Name: "
+    task_name = gets.chomp
+    print "Start Date (mm/dd/yyyy): "
+    start_date = gets.chomp 
+    print "End Date (mm/dd/yyyy): "
+    end_date = gets.chomp
+    print "Priority level? (High/Med/Low): "
+    priority = gets.chomp
+    print "Mark as Favorite? (Yes/No): "
+    mark_as_favorite = gets.chomp
+
+    favorite_task = @task_database.add_favorite_task(task_name, start_date, end_date, priority, mark_as_favorite)
+  
+    puts "Successfully created favorite task".colorize(:green)
+  end
+
+
   def read_all_task_in_database
     @task_database.select_all_tasks.each {|task| p task}
   
@@ -79,11 +107,5 @@ class App
     puts "Task successfully deleted".colorize(:green)
   
   end
-
-
-
-
-
-
 
 end

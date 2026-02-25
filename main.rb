@@ -36,7 +36,6 @@ def start_game(colors, attempts)
 
     check_if_guess_matches_with_code(guess_to_color_balls, color_code_to_color_balls)
 
-    puts "Color code is: #{color_code_to_color_balls}"
 
     feedback = give_feedback_based_on_guess(guess_to_color_balls, color_code_to_color_balls)
     puts "Feedback: #{feedback}"

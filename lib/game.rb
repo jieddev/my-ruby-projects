@@ -9,11 +9,10 @@ class Game
     
     @color_code_to_color_balls = convert_array_to_color_balls(@color_code, @colors)
 
-    @attempts.times do
-      puts "Attempt ##{@attempts}" 
+    @attempts.times do |attempt_left|
+      puts "Attempt ##{attempt_left + 1}" 
       print "Please enter your guess: "
       @guess = gets.chomp
-      @attempts -= 1
 
       @guess_to_array = @guess.split("")
 

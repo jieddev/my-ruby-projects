@@ -19,4 +19,6 @@ attempts = 12
 
 game = Game.new(colors, attempts)
 
+puts game.colors
+
 game.start_game

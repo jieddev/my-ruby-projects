@@ -1,4 +1,6 @@
 class Game
+  attr_accessor :colors
+
   def initialize(colors, attempts)
     @colors = colors
     @attempts = attempts  

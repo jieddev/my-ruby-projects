@@ -34,7 +34,11 @@ def start_game(colors, attempts)
 
     puts " "
 
-    check_if_guess_matches_with_code(guess_to_color_balls, color_code_to_color_balls)
+    win = check_if_guess_matches_with_code(guess_to_color_balls, color_code_to_color_balls)
+
+    if win == true 
+      break
+    end
 
 
     feedback = give_feedback_based_on_guess(guess_to_color_balls, color_code_to_color_balls)
@@ -74,9 +78,13 @@ end
 def check_if_guess_matches_with_code(guess_to_color_code, color_code_to_color_balls)
   # p guess_to_color_code
   
+  win = true
+
   if guess_to_color_code == color_code_to_color_balls
     puts " "
     puts "That's Bingo! You Win! "
+
+    return win
   end
 
 end
